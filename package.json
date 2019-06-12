@@ -1,0 +1,14 @@
+{
+  "name": "Natours-css-practice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com-lukas:LukaszK88/Natours-css-practice.git",
+  "author": "Lukasz <lukasz.kowal@awin.com>",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  },
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css --watch"
+  }
+}
