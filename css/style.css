@@ -7,14 +7,20 @@ Dark green: #28b485
 
 */
 
-* {
+*,
+*::after,
+*::before{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
-  padding: 30px;
+  padding: 3rem;
   font-family: Lato, sans-serif;
 }
 
@@ -38,15 +44,15 @@ body {
 .heading-primary {
   color: white;
   text-transform: uppercase;
-  margin-bottom: 40px;
+  margin-bottom: 4rem;
 
   backface-visibility: hidden;
 }
 
 .heading-primary-main {
   display: block;
-  letter-spacing: 20px;
-  font-size: 60px;
+  letter-spacing: 2rem;
+  font-size: 6rem;
 
   animation-name: moveInLeft;
   animation-duration: 1s;
@@ -55,8 +61,8 @@ body {
 
 .heading-primary-sub {
   display: block;
-  letter-spacing: 15px;
-  font-size: 20px;
+  letter-spacing: 1.5rem;
+  font-size: 2rem;
 
   animation-name: moveInRight;
   animation-duration: 1s;
@@ -66,11 +72,11 @@ body {
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
   }
 
   80% {
-    transform: translateX(10px);
+    transform: translateX(1rem);
   }
 
   100% {
@@ -82,11 +88,11 @@ body {
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
   }
 
   80% {
-    transform: translateX(-10px);
+    transform: translateX(-1rem);
   }
 
   100% {
@@ -99,20 +105,21 @@ body {
 .btn:visited{
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
   display: inline-block;
-  border-radius: 100px;
+  border-radius: 10rem;
   transition: all .2s;
+  font-size: 1.6rem;
 }
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0,0,0, 0.2);
+  box-shadow: 0 1rem 2rem rgba(0,0,0, 0.2);
 }
 
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0,0,0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0, 0.2);
 }
 
 .btn-white {
