@@ -106,6 +106,10 @@ body {
   color: #727272;
   background-color: #ffff; }
 
+.btn-green {
+  color: #ffff;
+  background-color: #28b485; }
+
 .btn-text:visited, .btn-text:link {
   font-size: 1.6rem;
   color: #55c57a;
@@ -228,6 +232,22 @@ body {
         padding: 1rem; }
         .card__details ul li:not(:last-child) {
           border-bottom: 1px solid #f5f5f5; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 99%;
+    text-align: center; }
+  .card__price-box {
+    text-align: center;
+    margin-bottom: 8rem; }
+  .card__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase; }
+  .card__price-value {
+    font-size: 6rem;
+    font-weight: 100; }
 
 .header {
   background-image: url("../../img/hero.jpg");
@@ -282,5 +302,5 @@ body {
 
 .section-tours {
   background-color: #f5f5f5;
-  padding: 25rem 0;
+  padding: 25rem 0 15rem;
   margin-top: -20vh; }
