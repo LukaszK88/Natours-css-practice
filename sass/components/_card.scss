@@ -1,0 +1,94 @@
+.card {
+  position: relative;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  height: 50rem;
+
+  &__side {
+    height: 50rem;
+    transition: all 0.8s ease;
+
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    overflow: hidden;
+
+    border-radius: 3px;
+    box-shadow: 0 1rem 3rem rgba($color-black, 0.2);
+
+    &--front {
+      background-color: $color-white
+    }
+    &--back {
+      background-color: #28b485;
+      transform: rotateY(180deg);
+
+      &-1 {
+        background-image: linear-gradient(to right bottom, $color-light, $color-dark);
+      }
+
+      &-2 {
+        background-image: linear-gradient(to right bottom, $color-light, $color-dark);
+      }
+
+      &-3 {
+        background-image: linear-gradient(to right bottom, $color-light, $color-dark);
+      }
+    }
+  }
+
+  &:hover &__side--front{
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back{
+    transform: rotateY(0);
+  }
+
+  &__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    --webkit-clip-path: polygon(0 0,100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0,100% 0, 100% 85%, 0 100%);
+
+    background-image: linear-gradient(to right bottom, $color-light, $color-dark), url("../../img/nat-5.jpg");
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    color: $color-white;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%;
+  }
+
+  &__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    background-image: linear-gradient(to right bottom, rgba($color-light, .85),rgba($color-dark, .85));
+  }
+
+  &__details {
+    padding: 3rem;
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-grey-light-1;
+        }
+      }
+    }
+  }
+}
